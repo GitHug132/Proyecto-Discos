@@ -2,7 +2,14 @@
     ViewBag.Title = "Home Page";
 }
 
-@using React.AspNet
+
+
+<h2 id="container"></h2>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/scripts/react/react.min.js"></script>
+<!--<script src="~/scripts/react/react.js"></script>-->
+<script src="@Url.Content("~/scripts/jsx/HelloWorld.jsx")"></script>
 
 <div class="jumbotron">
     <h1>ASP.NET</h1>
@@ -12,11 +19,6 @@
 
 <div class="row">
     <div class="col-md-4">
-
-        <div id="content"></div>
-        <script src="@Url.Content("~/Scripts/React/HelloWorld.jsx")"></script>
-
-
         <h2>Getting started</h2>
         <p>
             ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
