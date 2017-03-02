@@ -494,6 +494,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\star-rating.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -528,7 +529,16 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js\star-rating.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\React\react-dom-server.js" />
+    <Content Include="Scripts\React\react-dom-server.min.js" />
+    <Content Include="Scripts\React\react-dom.js" />
+    <Content Include="Scripts\React\react-dom.min.js" />
+    <Content Include="Scripts\React\react-with-addons.js" />
+    <Content Include="Scripts\React\react-with-addons.min.js" />
+    <Content Include="Scripts\React\react.js" />
+    <Content Include="Scripts\React\react.min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
@@ -566,7 +576,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Scripts\React\HelloWorld.jsx" />
+    <Content Include="Scripts\jsx\HelloWorld.jsx" />
     <Content Include="Views\_ViewImports.cshtml" />
   </ItemGroup>
   <ItemGroup>
