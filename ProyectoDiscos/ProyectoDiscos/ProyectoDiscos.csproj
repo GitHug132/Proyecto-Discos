@@ -529,7 +529,11 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+<<<<<<< HEAD
     <Content Include="Scripts\js\star-rating.js" />
+=======
+    <None Include="Scripts\jsx\HelloWorld.jsx" />
+>>>>>>> 0d777877a45e9ae238c512e82138b78e220f8481
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\React\react-dom-server.js" />
     <Content Include="Scripts\React\react-dom-server.min.js" />
@@ -576,7 +580,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+<<<<<<< HEAD
     <Content Include="Scripts\jsx\HelloWorld.jsx" />
+=======
+>>>>>>> 0d777877a45e9ae238c512e82138b78e220f8481
     <Content Include="Views\_ViewImports.cshtml" />
   </ItemGroup>
   <ItemGroup>
