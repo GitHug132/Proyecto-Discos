@@ -11,6 +11,18 @@
 <!--<script src="~/scripts/react/react.js"></script>-->
 <script src="@Url.Content("~/scripts/jsx/HelloWorld.jsx")"></script>
 
+
+<script src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"></script>
+<script src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
+
+
+
+@Styles.Render("~/Content/star-rating.css")
+@Scripts.Render("~/Scripts/js/star-rating.js")
+
+<script src="@Url.Content("~/Scripts/js/star-rating.js")"></script>
+<link href="@Url.Content("~/Constent/star-rating.css")" media="all" rel="stylesheet" type="text/css" />
+
 <div class="jumbotron">
     <h1>ASP.NET</h1>
     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
@@ -19,6 +31,14 @@
 
 <div class="row">
     <div class="col-md-4">
+<<<<<<< HEAD
+        <script src="@Url.Content("~/Scripts/React/react.min.js")"></script>
+        <div id="content"></div>
+        <script src="@Url.Content("~/Scripts/jsx/HelloWorld.jsx")"></script>
+
+
+=======
+>>>>>>> 0d777877a45e9ae238c512e82138b78e220f8481
         <h2>Getting started</h2>
         <p>
             ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
@@ -38,4 +58,35 @@
         <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
         <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
+</div>
+
+
+<div class="eve-top">
+    <div class="col-md-5 eve-lt">
+        <div class="ev-lft">
+            <img src="images/img5.jpg" alt=" " class="img-responsive">
+        </div>
+        <div class="ev-rgt">
+            <h5>3.4</h5>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="col-md-7 eve-rt">
+        <h4>Pobre diabla</h4>
+        <p>Don Omar</p>
+        <label for="input-1" class="control-label">Rate This</label>
+        <input class="input-1" name="input-1" value="0" class="rating-loading">
+        <script>
+					$(document).on('ready', function(){
+						$('.input-1').rating({min: 0, max: 10, step: 1, stars: 10});
+
+						$('.input-1').on('rating.change', function(event, value, caption) {
+							console.log(value);
+							console.log(caption);
+						});
+
+					});
+        </script>
+    </div>
+    <div class="clearfix"></div>
 </div>
