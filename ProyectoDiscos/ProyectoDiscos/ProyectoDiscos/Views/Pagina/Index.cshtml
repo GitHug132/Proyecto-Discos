@@ -1,0 +1,235 @@
+﻿@model ProyectoDiscos.Models.Usuario
+
+@{
+    Layout = null;
+}
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Music8 a Music Web Templates Category Flat Bootstarp Resposive Website Template | Events :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Music8 Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="@Url.Content("~/css/bootstrap.css")" rel='stylesheet' type='text/css' />
+    <!-- Custom Theme files -->
+    <link href="@Url.Content("~/css/style.css")" rel='stylesheet' type='text/css' />
+    <script src="@Url.Content("~/Scripts/js/jquery-1.11.1.min.js")"></script>
+    <!--Jquerry-UI-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="@Url.Content("~/css/jquery-ui.min.css")" media="all" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/css/jquery-ui.structure.min.css")" media="all" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/css/jquery-ui.theme.min.css")" media="all" rel="stylesheet" type="text/css" />
+    <!--webfonts-->
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700|Six+Caps' rel='stylesheet' type='text/css'>
+    <!--//webfonts-->
+
+    <link href="@Url.Content("~/css/star-rating.css")" media="all" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/js/star-rating.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/react/react.js")"></script>
+
+
+</head>
+<body>
+    <div id="dialog" title="Primera caja" style="display: none;">
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.nombreUsuario, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <br />
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.nombreUsuario, new { htmlAttributes = new { @class = "form-control", id = "nombre" } })
+                        @Html.ValidationMessageFor(model => model.nombreUsuario, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <br />
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", id="password", type="password", @readonly="true"} })
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input id="Create" type="submit" value="Create" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        }
+
+
+
+    </div>
+
+    <!--banner-->
+    <!--<div class="banner-1">-->
+    <div class="header-top">
+        <div class="header-bottom">
+            <div class="fixed-header">
+                <div class="logo">
+                    <h1><a href="#">Music<span>8</span></a></h1>
+                </div>
+                <div class="hd-lt">
+                    <span class="menu"> </span>
+                    <div class="top-menu">
+                        <nav class="cl-effect-21">
+                            <ul>
+                                <li>@Html.ActionLink("Home", "Index", "Pagina")</li>
+                                <li>@Html.ActionLink("Top 5", "Index", "Grafica")</li>
+                                <li><a id="LogIn" href="#">Log In</a></li>
+                                <li><a href="#">Log Out</a></li>
+                                <li><a href="#">Register</a></li>
+                                <div class="clearfix"></div>
+
+                            </ul>
+                            <div id="content"></div>
+                        </nav>
+                    </div>
+                    <!-- script for menu -->
+                    <script>
+				$( "span.menu" ).click(function() {
+				  $( ".top-menu" ).slideToggle( "slow", function() {
+				    // Animation complete.
+				  });
+				});
+                    </script>
+                    <!-- script for menu -->
+                    <script>
+		$(document).ready(function() {
+			 var navoffeset=$(".header-bottom").offset().top;
+			 $(window).scroll(function(){
+				var scrollpos=$(window).scrollTop();
+				if(scrollpos >=navoffeset){
+					$(".header-bottom").addClass("fixed");
+				}else{
+					$(".header-bottom").removeClass("fixed");
+				}
+			 });
+
+		});
+                    </script>
+
+                    <div class="header-right">
+
+                        <form>
+                            <input type="text" placeholder="" required="">
+                        </form>
+                        <!--<div class="button">
+                                <form>
+                                    <input type="submit" value="Search">
+                                </form>
+                            </div>
+                            <div class="clearfix"> </div>-->
+                    </div>
+
+
+                    <div class="header-right">
+                        <ul class="f-icons social">
+                            <li><a href="https://es-es.facebook.com/" class="facebook"> </a></li>
+                            <li><a href="https://twitter.com/?lang=es" class="twitter"> </a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!--</div>-->
+    <!--banner-->
+    <div class="events">
+        <div class="container">
+            <div class="col-md-9 events-left">
+                <h3>Featured events</h3>
+                <div class="eve-top">
+                    <div class="col-md-5 eve-lt">
+                        <div class="ev-lft">
+                            <img src="@Url.Content("~/images/img1.jpg")" alt=" " class="img-responsive">
+                        </div>
+                        <div class="ev-rgt">
+                            <h5>7.5</h5>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="col-md-7 eve-rt">
+                        <h4>Loba</h4>
+                        <p>Shakira</p>
+                        <label for="input-1" class="control-label">Rate This</label>
+                        <input class="input-1" name="input-1" value="0" class="rating-loading">
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="eve-top">
+                    <div class="col-md-5 eve-lt">
+                        <div class="ev-lft">
+                            <img src="@Url.Content("~/images/img1.jpg")" alt=" " class="img-responsive">
+                        </div>
+                        <div class="ev-rgt">
+                            <h5>3.4</h5>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="col-md-7 eve-rt">
+                        <h4>Pobre diabla</h4>
+                        <p>Don Omar</p>
+                        <label for="input-1" class="control-label">Rate This</label>
+                        <input class="input-1" name="input-1" value="0" class="rating-loading">
+                        <script>
+					$(document).on('ready', function(){
+						$('.input-1').rating({min: 0, max: 10, step: 1, stars: 10});
+
+						$('.input-1').on('rating.change', function(event, value, caption) {
+							console.log(value);
+							console.log(caption);
+						});
+
+					});
+                        </script>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+
+            </div>
+            <div class="col-md-3 events-right">
+                <div class="box">
+                    <map name="mapaAdrian">
+                        <area alt="spotify" title="spotify" shape="rect" coords="0, 0, 260, 111" href="https://www.spotify.com/es/" />
+                        <area alt="Twitch" title="Twitch" shape="RECT" coords="0,114,260,239" href="https://www.twitch.tv/">
+                        <area alt="Skype" title="Skype" shape="RECT" coords="0,241,260,352" href="https://www.skype.com/es/">
+                        <area alt="BattleNET" title="BattleNET" shape="RECT" coords="0,354,260,442" href="http://eu.battle.net/es/">
+                        <area alt="Youtube" title="Youtube" shape="RECT" coords="0,445,260,587" href="https://www.youtube.com/?hl=es&gl=ES">
+                        <area alt="Steam" title="Steam" shape="RECT" coords="0,591,260,700" href="http://store.steampowered.com/?l=spanish">
+                    </map>
+
+
+                    <li>
+                        <img src="@Url.Content("~/images/publicidad3.png")" usemap="#mapaAdrian">
+                    </li>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <script src="@Url.Content("~/Scripts/js/forms.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jsx/HelloWorld.jsx")"></script>
+</body>
+</html>
