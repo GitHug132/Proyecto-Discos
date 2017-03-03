@@ -1,8 +1,8 @@
 using React;
 
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(ProyectoDew.ReactConfig), "Configure")]
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(ProyectoDiscos.ReactConfig), "Configure")]
 
-namespace ProyectoDew
+namespace ProyectoDiscos
 {
 	public static class ReactConfig
 	{
