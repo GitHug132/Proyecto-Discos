@@ -78,3 +78,6 @@ c:\users\alumno\documents\visual studio 2015\Projects\ProyectoDew\ProyectoDew\bi
 c:\users\alumno\documents\visual studio 2015\Projects\ProyectoDew\ProyectoDew\bin\ru-ru\JavaScriptEngineSwitcher.Core.resources.dll
 c:\users\alumno\documents\visual studio 2015\Projects\ProyectoDew\ProyectoDew\bin\ru-ru\JavaScriptEngineSwitcher.V8.resources.dll
 c:\users\alumno\documents\visual studio 2015\Projects\ProyectoDew\ProyectoDew\bin\ru-ru\MsieJavaScriptEngine.resources.dll
+C:\Users\alumno\Documents\Visual Studio 2015\Projects\Proyecto-Discos\ProyectoDew\ProyectoDew\obj\Debug\ProyectoDew.csprojResolveAssemblyReference.cache
+C:\Users\alumno\Documents\Visual Studio 2015\Projects\Proyecto-Discos\ProyectoDew\ProyectoDew\obj\Debug\ProyectoDew.dll
+C:\Users\alumno\Documents\Visual Studio 2015\Projects\Proyecto-Discos\ProyectoDew\ProyectoDew\obj\Debug\ProyectoDew.pdb
