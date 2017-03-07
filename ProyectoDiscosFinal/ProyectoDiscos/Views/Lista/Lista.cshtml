@@ -1,0 +1,135 @@
+﻿@model IEnumerable<ProyectoDiscos.Models.Puntuacion>
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Lista</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Music8 Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="@Url.Content("~/css/bootstrap.css")" rel='stylesheet' type='text/css' />
+    <!-- Custom Theme files -->
+    <link href="@Url.Content("~/css/style.css")" rel='stylesheet' type='text/css' />
+    <script src="@Url.Content("~/Scripts/js/jquery-1.11.1.min.js")"></script>
+    <!--Jquerry-UI-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="@Url.Content("~/css/jquery-ui.min.css")" media="all" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/css/jquery-ui.structure.min.css")" media="all" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/css/jquery-ui.theme.min.css")" media="all" rel="stylesheet" type="text/css" />
+    <!--webfonts-->
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700|Six+Caps' rel='stylesheet' type='text/css'> 
+    <!--Star-rating-->
+    <link href="@Url.Content("~/css/star-rating.css")" media="all" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/js/star-rating.js")" type="text/javascript"></script>
+    <!--Toastr-->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" media="screen" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+</head>
+<body>
+
+    <!--menu-->
+    <div class="header-top">
+        <div class="header-bottom">
+            <div class="fixed-header">
+                <div class="logo">
+                    <img id="logo" class="img-responsive" src="@Url.Content("~/images/logo.svg")" />
+                </div>
+                <div class="hd-lt">
+                    <span class="menu"> </span>
+                    <div class="top-menu">
+                        <nav class="cl-effect-21">
+                            <ul>
+                                <li>@Html.ActionLink("Home", "Index", "Pagina")</li>
+                                <li>@Html.ActionLink("Top 5", "Index", "Grafica")</li>
+                                <li>@Html.ActionLink("Log Out", "Logout", "Pagina")</li>
+                                <div class="clearfix"></div>
+
+                            </ul>
+                            <div id="content"></div>
+                        </nav>
+                    </div>
+
+                    <div class="header-right">
+
+                        @if (Session["Nombre"] != null)
+                        {
+                            <label>Has Iniciado sesión!<br /><span id="nombreCliente">@Session["Nombre"].ToString()</span></label>
+                            <span id="IdCliente" style="display:none;">@Session["IdCliente"].ToString()</span>
+                        }
+                        else
+                        {
+                            <label>No has iniciado sesión</label>
+                            <span id="IdCliente" style="display:none;"></span>
+                        }
+                    </div>
+
+
+                    <div class="header-right">
+                        <ul class="f-icons social">
+                            <li><a href="https://es-es.facebook.com/" class="facebook"> </a></li>
+                            <li><a href="https://twitter.com/?lang=es" class="twitter"> </a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--main body-->
+    <div class="events">
+        <div class="container">
+
+            <!--lista-->
+            <div id="lista" class="col-md-9 events-left">
+
+@foreach (var item in Model)
+{
+                <div id="@Html.DisplayFor(modelItem => item.Disco.IdDisco)" class="eve-top">
+                    <div class="col-md-5 eve-lt">
+                        <div class="ev-lft">
+                            <img src="@Url.Content("~/images/img1.jpg")" alt="" class="img-responsive">
+                        </div>
+                        <div class="ev-rgt">
+                            <h5>@Html.DisplayFor(modelItem => item.Puntuacion1)</h5>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="col-md-7 eve-rt">
+                        <h4>@Html.DisplayFor(modelItem => item.Disco.Titulo)</h4>
+                        <label for="input-1" class="control-label">Rate This</label>
+                        <input  class="input-1" name="input-1" value="0" class="rating-loading">
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+}
+
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+
+
+    </div>
+
+    <div class="clearfix"></div>
+
+    <!--scripts-->
+    <script src="@Url.Content("~/Scripts/react/react.js")"></script>
+    <!--<script src = "@Url.Content("~/Scripts/jsx/HelloWorld.jsx")" ></script>-->
+    <script src="~/Scripts/js/menu.js"></script>
+    <script src="~/Scripts/js/puntuar.js"></script>
+</body>
+</html>

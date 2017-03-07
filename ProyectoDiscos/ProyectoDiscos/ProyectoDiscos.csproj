@@ -467,7 +467,6 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Puntuacion.cs" />
     <Compile Include="Models\Tipo.cs" />
-    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Cliente.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -566,6 +565,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\js\chart.js" />
     <Content Include="Scripts\js\forms.js" />
+    <Content Include="Scripts\js\HelloWorld.js" />
     <Content Include="Scripts\js\jquery-1.11.1.min.js" />
     <Content Include="Scripts\js\lightbox-plus-jquery.min.js" />
     <Content Include="Scripts\js\locales\ar.js" />
@@ -583,6 +583,7 @@
     <Content Include="Scripts\js\menu.js" />
     <Content Include="Scripts\js\puntuar.js" />
     <Content Include="Scripts\js\star-rating.js" />
+    <Content Include="Scripts\js\toggle.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\react\react-dom-server.js" />
     <Content Include="Scripts\react\react-dom-server.min.js" />
@@ -632,10 +633,10 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\_ViewImports.cshtml" />
-    <Content Include="Views\Auth\Login.cshtml" />
     <Content Include="Views\Pagina\Index.cshtml" />
     <Content Include="Views\Grafica\Index.cshtml" />
     <Content Include="Scripts\jsx\HelloWorld.jsx" />
+    <Content Include="Views\Auth\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

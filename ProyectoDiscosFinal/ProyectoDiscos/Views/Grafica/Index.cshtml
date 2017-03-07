@@ -1,0 +1,79 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Top 5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Music8 Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="@Url.Content("~/css/bootstrap.css")" rel='stylesheet' type='text/css' />
+    <!-- Custom Theme files -->
+    <link href="@Url.Content("~/css/style.css")" rel='stylesheet' type='text/css' />
+    <script src="@Url.Content("~/Scripts/js/jquery-1.11.1.min.js")"></script>
+
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700|Six+Caps' rel='stylesheet' type='text/css'>
+    <!--//webfonts-->
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+<body>
+
+    <!--menu-->
+    <div class="header-top">
+        <div class="header-bottom">
+            <div class="fixed-header">
+                <div class="logo">
+                    <img src="@Url.Content("~/images/logo.svg")" width="200px" heigth="120px" style="margin-top:-40px;margin-left:-40px;" />
+                </div>
+                <div class="hd-lt">
+                    <span class="menu"> </span>
+                    <div class="top-menu">
+                        <nav class="cl-effect-21">
+                            <ul>
+                                <li>@Html.ActionLink("Home", "Index", "Pagina")</li>
+                                <li>@Html.ActionLink("Lista", "Lista", "Lista")</li>
+                                <li>@Html.ActionLink("Top 5", "Index", "Grafica")</li>
+                                <div class="clearfix"></div>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="header-right">
+                        <ul class="f-icons">
+                            <li><a href="https://es-es.facebook.com/" class="facebook"> </a></li>
+                            <li><a href="https://twitter.com/?lang=es" class="twitter"> </a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--top 5-->
+    <div class="gallery">
+        <div class="container">
+            <div id="chart_div" class="galler-top">
+
+                <div class="clearfix"></div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!--scripts-->
+    <script src="~/Scripts/js/chart.js"></script>
+    <script src="~/Scripts/js/menu.js"></script>
+
+</body>
+</html>

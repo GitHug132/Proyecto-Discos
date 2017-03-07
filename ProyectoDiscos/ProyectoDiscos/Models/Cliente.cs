@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -15,12 +16,16 @@ namespace ProyectoDiscos.Models
         }
         [Key]
         public int id { get; set; }
+        [Required(ErrorMessage = "Nombre de usuario no válido")]
         public string Nombre { get; set; }
         public string Email { get; set; }
+        [Required(ErrorMessage = "Password no válido")]
+        public string Password { get; set; }
         public Nullable<System.DateTime> FechaNacimiento { get; set; }
         public Nullable<System.DateTime> FechaRegistro { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<Puntuacion> Puntuacion { get; set; }
     }
 }

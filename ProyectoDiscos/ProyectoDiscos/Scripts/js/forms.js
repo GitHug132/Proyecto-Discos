@@ -1,4 +1,3 @@
-var Formulario = null;
 
 $(document).ready(function() {
     /*$("#Create").submit(function (ev) {
@@ -27,38 +26,13 @@ $(document).ready(function() {
                 },
                 resizable: true
             });
-
-            $("#dialog2").dialog({
-                autoOpen: false,
-                width: 'auto', // overcomes width:'auto' and maxWidth bug
-                maxWidth: 600,
-                height: 'auto',
-                modal: true,
-                fluid: true, //new option
-                show: {
-                    effect: "drop",
-                    duration: 1000
-                },
-                hide: {
-                    effect: "drop",
-                    duration: 1000
-                },
-                resizable: true
-            });
   
             $("#LogIn").click(function() {
                 $("#dialog").dialog('open');
             });
-
-            $("#Register").click(function () {
-                $("#dialog2").dialog('open');
-            });
             
-            //passwordNumeros();
+            passwordNumeros();
 
-            
-
-            Formulario = new Formulario();
 
     });
 
@@ -75,28 +49,7 @@ $(document).on("dialogopen", ".ui-dialog", function (event, ui) {
     fluidDialog();
 });
 
-
-
-
-
-Formulario = function () {
-
-
-    this.cargarDom();
-}
-
-
-Formulario.prototype.cargarDom = function () {
-
-    this.passwordNumeros(0);
-    this.passwordNumeros(1);
-
-}
-
-
-
-function fluidDialog ()
-{
+function fluidDialog() {
     var $visible = $(".ui-dialog:visible");
     // each open dialog
     $visible.each(function () {
@@ -121,7 +74,7 @@ function fluidDialog ()
 }
 
 
-Formulario.prototype.passwordNumeros = function(num)
+function passwordNumeros ()
 {
 
     var arrayNumeros = ['0','1','2','3','4','5','6','7','8','9'];
@@ -129,56 +82,37 @@ Formulario.prototype.passwordNumeros = function(num)
     var enlace = document.createElement("a");
     var enlaceTexto = document.createTextNode("Limpiar password");
     enlace.setAttribute("href","#");
-    enlace.addEventListener("click", this.limpiarPassword);
+    enlace.addEventListener("click", limpiarPassword);
     enlace.appendChild(enlaceTexto);
     
     for(var i = 0; i < arrayNumeros.length; i++){
         var botonNumero = document.createElement("input");
         botonNumero.setAttribute("type","button");
         botonNumero.setAttribute("value", arrayNumeros[i]);
-        botonNumero.addEventListener("click", this.escribirNumero, false);
+        botonNumero.addEventListener("click", escribirNumero, false);
         var numero = document.createTextNode(arrayNumeros[i]+ "   ");
         botonNumero.appendChild(numero);
-        //var currentDiv = document.getElementsByType("password");
-        var currentDiv =  document.querySelectorAll("[type='password']");
-        //$("[type=password]").parentNode.appendChild(botonNumero);
-        currentDiv[num].parentNode.appendChild(botonNumero);
-
+        var currentDiv = document.getElementById("password");
+        currentDiv.parentNode.appendChild(botonNumero);
     }
-    //$("[type=password]").parentNode.appendChild(enlace);
-    currentDiv[num].parentNode.appendChild(enlace);
-
+    currentDiv.parentNode.appendChild(enlace);  
 }
 
-Formulario.prototype.limpiarPassword = function()
-{
-    //document.getElementById("password").value = "";
-    var password = document.querySelectorAll("[type='password']");
-    password[0].value = "";
-    password[1].value = "";
+function limpiarPassword(){
+    document.getElementById("password").value = "";
 }
 
-Formulario.prototype.escribirNumero = function(numero)
-{
-    //var password = document.getElementById("password");
-    var password = document.querySelectorAll("[type='password']");
-    password[0].value += numero.target.defaultValue;
-    password[1].value += numero.target.defaultValue;
+function escribirNumero(numero){
+    var password = document.getElementById("password");
+    password.value += numero.target.defaultValue;
+    
 }
 
-Formulario.prototype.shuffle = function(arrayNumeros)
-{
+function shuffle (arrayNumeros){
         for (let i = arrayNumeros.length; i>0; i--) {
         let j = Math.floor(Math.random() * i);
         [arrayNumeros[i - 1], arrayNumeros[j]] = [arrayNumeros[j], arrayNumeros[i - 1]];
     }
 }
-
-
-
-  
-
-
-
 
 

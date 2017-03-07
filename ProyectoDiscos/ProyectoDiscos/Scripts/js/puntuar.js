@@ -6,9 +6,19 @@
         var f = new Date();
         var fechaActual = "" + f.getFullYear() + "-" + (f.getMonth() + 1) + "-" + f.getDate() + " 00:00:00.000";
 
-        //2013-06-05 00:00:00.000
 
-        var puntuacion = {
+        toastr.options.closeButton = true;
+        toastr.options.positionClass = "toast-bottom-right";
+
+        toastr.success('<strong>Gracias</strong> por su voto.', '<i>Éxito</i>');
+        toastr.warning('<strong>Error</strong> al votar.', 'Peligro');
+
+        //2013-06-05 00:00:00.000
+        //notification('success', '<strong>Gracias</strong> por su voto.');
+        
+        //notification('error', '<strong>Error</strong> al votar.');
+        
+        /*var puntuacion = {
             Idcliente: $("#Idcliente").text(),
             iddisco: $("#iddisco").text(),
             Puntuacion: value,
@@ -24,12 +34,25 @@
                 
             },
             error: function (e) {
-                console.log(e.responseText)
+                //console.log(e.responseText)
+                
             }
-        });
+        });*/
 
-        console.log(value);
-        console.log(caption);
+        //console.log(value);
+       // console.log(caption);
     });
 
 });
+
+/*function notification(type, message) {
+    if (type == 'success') {
+        
+    } else if (type == 'error') {
+        toastr.error(message, 'Error');
+    } else if (type == 'warning') {
+        
+    } else {
+        toastr.info(message, 'Información');
+    }
+}*/

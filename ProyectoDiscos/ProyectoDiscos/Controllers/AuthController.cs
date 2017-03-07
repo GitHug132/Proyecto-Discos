@@ -17,21 +17,21 @@ namespace ProyectoDiscos.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult DoLogin(Usuario usuario)
+        public ActionResult Login(Cliente cliente)
         {
             if (ModelState.IsValid)
             {
-                Usuario authUser = null;
+                Cliente authUser = null;
                 using (DiscosDAL discosDAL = new DiscosDAL())
                 {
-                    authUser = discosDAL.Usuario.FirstOrDefault(u => u.nombreUsuario == usuario.nombreUsuario && u.Password == usuario.Password);
+                    authUser = discosDAL.Clientes.FirstOrDefault(u => u.Nombre == cliente.Nombre && u.Password == cliente.Password);
                 }
 
                 if(authUser != null)
                 {
-                    FormsAuthentication.SetAuthCookie(authUser.nombreUsuario, false);
+                    FormsAuthentication.SetAuthCookie(authUser.Nombre, false);
                     Session["USUARIO"] = authUser;
-                    return RedirectToAction("index", "Home");
+                    return RedirectToAction("index", "Pagina");
                 }
                 else
                 {
@@ -45,6 +45,17 @@ namespace ProyectoDiscos.Controllers
                 return View();
             }
             
+        }
+        [HttpPost]
+        public ActionResult Register(Cliente cliente)
+        {
+            return RedirectToAction("Index", "Pagina");
+        }
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("Index", "Pagina");
         }
     }
 }
